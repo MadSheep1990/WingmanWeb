@@ -11,6 +11,22 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        background: #000;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -50,7 +66,7 @@
         </div>
       </div>
     </nav>
-    <div class="imgContent" style="margin-top: 65px">
+    <div class="imgContent" style="margin-top: 65px; margin-bottom: 65px">
       <img src="/img/header.jpg" alt="" width="100%" />
     </div>
 
@@ -79,6 +95,17 @@
               start, end, and center alignment, responsive classes are available
               that use the same viewport width breakpoints as the grid system.
             </p>
+          </div>
+        </div>
+        <div class="row my-3 p-4">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/06g45aGaswQ"
+              frameborder="0"
+              width="100%"
+              allow="autoplay;"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
