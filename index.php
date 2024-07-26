@@ -30,7 +30,7 @@
 
 <body>
   <?php include("navbar.php") ?>
-  <div class="imgContent" style="margin-top: 100px; ">
+  <div class="imgContent" style="margin-top: 65px; ">
     <img src="./img/header.jpg" alt="" width="100%" />
   </div>
   <div class="fixed-bottom">
