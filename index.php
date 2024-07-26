@@ -33,7 +33,20 @@
   <div class="imgContent" style="margin-top: 100px; ">
     <img src="./img/header.jpg" alt="" width="100%" />
   </div>
-
+  <div class="fixed-bottom">
+    <div class="row">
+      <a href="" class=" d-flex justify-content-end">
+        <img src=" ./img/1.png" style="width:20%;height:auto;margin-right:5px;
+      z-index: 0;">
+      </a>
+    </div>
+    <div class="row">
+      <a href="" class=" d-flex justify-content-end">
+        <img src=" ./img/2.png" style="width:20%;height:auto;margin-bottom:65px;margin-right:5px;
+      z-index: 0;">
+      </a>
+    </div>
+  </div>
   <div class="container-fluid" style="margin-bottom: 100px">
     <div class="container">
       <div class="row my-3 p-4">
