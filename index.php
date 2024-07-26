@@ -30,11 +30,11 @@
 
 <body>
   <?php include("navbar.php") ?>
-  <div class="imgContent" style="margin-top: 65px; margin-bottom: 65px">
+  <div class="imgContent" style="margin-top: 100px; ">
     <img src="./img/header.jpg" alt="" width="100%" />
   </div>
 
-  <div class="container-fluid">
+  <div class="container-fluid" style="margin-bottom: 100px">
     <div class="container">
       <div class="row my-3 p-4">
         <div class="col col-12 col-md-6 p-auto">

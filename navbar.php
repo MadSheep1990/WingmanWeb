@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/index.php">
+        <a class="navbar-brand" href="index.php">
             <img src="./img/logo_c.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-text-center rounded-circle" />
             เกษตรกรติดปีก
         </a>
@@ -10,10 +10,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./gallery.php">Gallery</a>
+                    <a class="nav-link" href="gallery.php">Gallery</a>
                 </li>
             </ul>
         </div>

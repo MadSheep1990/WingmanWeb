@@ -6,14 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/19af404e00.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* Custom styling for modal body */
+    .modal-body {
+      position: relative;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
+      /* Ensure the button is on top of the image */
+    }
+
+    .modal-image {
+      display: block;
+      max-width: 100%;
+      /* Ensure the image scales appropriately */
+      height: auto;
+    }
+  </style>
 </head>
 
 <body>
 
   <?php include("navbar.php") ?>
 
-  <div class="container">
-    <div id="listImg" style="margin-top: 90px; margin-bottom: 65px">
+  <div class="container" style="margin-top: 90px; margin-bottom: 65px">
+    <div id="listImg">
       <div class="row">
         <?php
         $directory = 'img/Gal';
@@ -34,7 +57,7 @@
 
           // Generate a unique ID for each image
           $imageId = 'img' . $index;
-          echo '<div class="col col-xl-2 col-md-4 col-12 p-2 d-flex justify-content-center align-items-center">';
+          echo '<div class="col col-xl-2 col-md-4 col-12 p-2 d-flex justify-content-center align-items-center shadow">';
           echo '<img id="' . $imageId . '" src="' . $image . '" alt="Gallery Image" class="img-thumbnail" style="cursor:pointer;width:100%;height:auto;margin:5px;">';
           echo '</div>';
 
@@ -48,39 +71,41 @@
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-          <div class="modal-header">
+          <!-- <div class="modal-header">
             <h5 class="modal-title" id="imageModalLabel">Image</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
+          </div> -->
           <div class="modal-body d-flex justify-content-center align-items-center">
-            <img id="modalImage" src="" alt="Full-size image" class="img-fluid" />
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <img id="modalImage" src="" alt="Full-size image" class="modal-image" />
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Include Popper.js and Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const imageIds = Array.from(document.querySelectorAll('#listImg img')).map(img => img.id);
+    <!-- Bootstrap JS Bundle with Popper -->
+    <!-- Include Popper.js and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-      imageIds.forEach(id => {
-        const imgElement = document.getElementById(id);
-        imgElement.addEventListener('click', () => {
-          const modalImage = document.getElementById('modalImage');
-          modalImage.src = imgElement.src; // Set the modal image source
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const imageIds = Array.from(document.querySelectorAll('#listImg img')).map(img => img.id);
 
-          // Initialize the modal
-          const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
-          imageModal.show(); // Show the modal
+        imageIds.forEach(id => {
+          const imgElement = document.getElementById(id);
+          imgElement.addEventListener('click', () => {
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imgElement.src; // Set the modal image source
+
+            // Initialize the modal
+            const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            imageModal.show(); // Show the modal
+          });
         });
       });
-    });
-  </script>
-  <!-- <script>
+    </script>
+    <!-- <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Fetch the image list JSON file
       fetch("image-list.json")
@@ -125,9 +150,9 @@
         .catch((error) => console.error("Error fetching image list:", error));
     });
   </script> -->
-  <?php
-  include('footer.php');
-  ?>
+    <?php
+    include('footer.php');
+    ?>
 </body>
 
 
