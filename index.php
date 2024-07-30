@@ -14,6 +14,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/19af404e00.js" crossorigin="anonymous"></script>
     <style>
+        body {
+            font-family: "Mitr", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
@@ -31,16 +37,19 @@
             height: 100%;
         }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body style="background:#d9d9d9;">
     <?php include("navbar.php") ?>
     <div class="imgContent" style="margin-top: 65px; ">
         <img src="./img/header.jpg" alt="" width="100%" />
     </div>
     <div class="fixed-bottom">
         <div class="row">
-            <a href="" class=" d-flex justify-content-end">
+            <a href="https://lin.ee/HpoiIlp" class=" d-flex justify-content-end">
                 <img src=" ./img/1.png" style="width:20%;height:auto;margin-right:5px;
       z-index: 0;">
             </a>
@@ -52,43 +61,12 @@
             </a>
         </div>
     </div>
-    <div class="container-fluid" style="margin-bottom: 100px">
-        <div class="container">
-            <div class="row my-3 p-4">
-                <div class="col col-12 col-md-6 p-auto">
-                    <p>
-                        Easily realign text to components with text alignment classes. For
-                        start, end, and center alignment, responsive classes are available
-                        that use the same viewport width breakpoints as the grid system.
-                    </p>
-                </div>
-                <div class="col col-12 col-md-6 p-auto">
-                    <img src="./img/content1.jpg" alt="" width="100%" />
-                </div>
-            </div>
-            <div class="row my-3 p-4">
-                <div class="col col-12 col-md-6 p-auto">
-                    <img src="./img/content1.jpg" alt="" width="100%" />
-                </div>
+    <div class="container-fluid " style="margin-bottom: 100px">
+        <div class="container bg-white shadow rounded-5">
 
-                <div class="col col-12 col-md-6 p-auto">
-                    <p>
-                        Easily realign text to components with text alignment classes. For
-                        start, end, and center alignment, responsive classes are available
-                        that use the same viewport width breakpoints as the grid system.
-                    </p>
-                </div>
-            </div>
-            <div class="row my-3 p-4">
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oUvE5cbiyD4?si=1OsA78nanVUygwtl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <!-- <iframe src="https://www.youtube.com/watch?v=oUvE5cbiyD4" frameborder="0" width="100%" allow="autoplay;" allowfullscreen></iframe> -->
-                </div>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FY8FE7yGnwY?si=ZBjBeSlQdUcyguBn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <!-- <iframe src="https://www.youtube.com/watch?v=FY8FE7yGnwY" frameborder="0" width="100%" allow="autoplay;" allowfullscreen></iframe> -->
-                </div>
-            </div>
+            <?php include 'content.php' ?>
+
+
         </div>
     </div>
 
