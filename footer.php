@@ -23,13 +23,13 @@
 
   <footer class="fixed-bottom border bg-white">
       <div class="footer-content">
-          <a href="#" class="d-flex justify-content-center align-items-center ms-2">
+          <a href="https://www.facebook.com/profile.php?id=61561319229915&mibextid=ZbWKwL" class="d-flex justify-content-center align-items-center ms-2">
               <i class="fa-brands fa-facebook-f footer-icon" style="color:#0421FF;"></i>
           </a>
           <a href="#" class="d-flex justify-content-center align-items-center ms-2">
               <i class="fa-brands fa-tiktok footer-icon" style="color: #ffffff;"></i>
           </a>
-          <a href="#" class="d-flex justify-content-center align-items-center ms-2">
+          <a href="https://www.youtube.com/@%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%9B%E0%B8%B5%E0%B8%81-Wingman" class="d-flex justify-content-center align-items-center ms-2">
               <i class="fa-brands fa-youtube footer-icon" style="color:#FF0000;"></i>
           </a>
       </div>
